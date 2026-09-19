@@ -46,6 +46,7 @@ const TechCard = ({ singleTechnology }: TechCardProps) => {
 
       {/* Information */}
       <div className="flex items-center justify-between">
+
         {/* Category */}
         <span className="rounded-lg bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
           {singleTechnology.category}
@@ -70,8 +71,7 @@ const TechCard = ({ singleTechnology }: TechCardProps) => {
       text-sm font-semibold text-white
       transition-all duration-300
       hover:bg-slate-800
-      active:scale-[0.98]
-    "
+      active:scale-[0.98]"
       >
         Add to Stack
       </button>
