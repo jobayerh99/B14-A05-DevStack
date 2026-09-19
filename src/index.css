@@ -1,7 +1,22 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-.simple-text{
-  font-semibold,
-  text-[#475569]
+.simple-text {
+  @apply font-semibold text-[#475569];
+}
+
+.banner-heading-txt {
+  @apply font-extrabold text-6xl text-[#0F172A];
+}
+
+.banner-gredient-txt {
+  background: linear-gradient(to right, #FF5722, #D81B7E, #7C3AED);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.banner-gredient-btn {
+  background: linear-gradient(to right, #F97316, #EC4899);
+  color: white;
 }

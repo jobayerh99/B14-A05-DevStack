@@ -1,16 +1,16 @@
 import React from "react";
-import Logo from "./assets/logo-text.png";
+import Logo from "../assets/logo-text.png";
 
 const Nav = () => {
   return (
-    <div>
-      <div className="grid grid-cols-3 gap-5 container mx-auto my-5 items-center">
+    <div className="sticky top-0 z-50 bg-white">
+      <div className="grid grid-cols-3 gap-5 container mx-auto pt-6 items-center">
         <div>
           <img src={Logo} alt="Logo" />
         </div>
 
         <div>
-          <ul className="flex gap-4 items-center">
+          <ul className="flex gap-4 items-center justify-center">
             <li className="font-semibold text-[#DB2777]">
               <a href="">Home</a>
             </li>
@@ -29,7 +29,7 @@ const Nav = () => {
           </ul>
         </div>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 justify-end">
           <button className="btn btn-neutral btn-outline rounded-full border-white">
             Sign In
           </button>
