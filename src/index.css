@@ -2,7 +2,7 @@
 @plugin "daisyui";
 
 .simple-text {
-  @apply font-semibold text-[#475569];
+  @apply font-semibold text-xs text-[#475569];
 }
 
 .banner-heading-txt {
@@ -19,4 +19,8 @@
 .banner-gredient-btn {
   background: linear-gradient(to right, #F97316, #EC4899);
   color: white;
+}
+
+.card-title {
+  @apply text-xl font-bold text-black 
 }

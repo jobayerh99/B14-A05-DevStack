@@ -2,6 +2,7 @@ import { Suspense } from "react"
 import Banner from "./Components/Banner"
 import Nav from "./Components/Nav"
 import MainLayout from "./Components/MainLayout"
+import { ToastContainer } from "react-toastify"
 
 
 const fetchTechInfo = async() => {
@@ -23,6 +24,9 @@ function App() {
       <Suspense fallback={<h2>Loading...</h2>}>
         <MainLayout techPromise={techPromise} />
       </Suspense>
+
+      
+      <ToastContainer/>
     </>
   )
 }

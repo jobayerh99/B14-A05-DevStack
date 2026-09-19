@@ -7,7 +7,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/React.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "badgeColor": "#E0F2FE",
+    "badgeTxtColor": "#0EA5E9"
   },
   {
     "id": "javascript",
@@ -17,7 +19,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
     "rating": 4.9,
     "difficulty": "Intermediate",
-    "badge": "Essential"
+    "badge": "Essential",
+    "badgeColor": "#FEF3C7",
+    "badgeTxtColor": "#D97706"
   },
   {
     "id": "typescript",
@@ -27,7 +31,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Trending"
+    "badge": "Trending",
+    "badgeColor": "#E0F2FE",
+    "badgeTxtColor": "#0284C7"
   },
   {
     "id": "html",
@@ -37,7 +43,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/HTML5.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "badgeColor": "#FFD0BD",
+    "badgeTxtColor": "#E34C27"
   },
   {
     "id": "css",
@@ -47,7 +55,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/CSS3.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "badgeColor": "#B8E3F3",
+    "badgeTxtColor": "#1673B5"
   },
   {
     "id": "tailwind",
@@ -57,7 +67,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
     "rating": 4.8,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "badgeColor": "#CFFAFE",
+    "badgeTxtColor": "#0891B2"
   },
   {
     "id": "nodejs",
@@ -67,7 +79,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Node.js.svg",
     "rating": 4.8,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "badgeColor": "#ECFDF5",
+    "badgeTxtColor": "#059669"
   },
   {
     "id": "express",
@@ -77,7 +91,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Express.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "badgeColor": "#F3F4F6",
+    "badgeTxtColor": "#374151"
   },
   {
     "id": "mongodb",
@@ -87,7 +103,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
     "rating": 4.7,
     "difficulty": "Intermediate",
-    "badge": "Popular"
+    "badge": "Popular",
+    "badgeColor": "#DCFCE7",
+    "badgeTxtColor": "#16A34A"
   },
   {
     "id": "postgresql",
@@ -97,7 +115,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
     "rating": 4.8,
     "difficulty": "Advanced",
-    "badge": "Powerful"
+    "badge": "Powerful",
+    "badgeColor": "#DBEAFE",
+    "badgeTxtColor": "#336791"
   },
   {
     "id": "python",
@@ -107,7 +127,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Python.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "badgeColor": "#FEF9C3",
+    "badgeTxtColor": "#CA8A04"
   },
   {
     "id": "docker",
@@ -117,7 +139,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Docker.svg",
     "rating": 4.7,
     "difficulty": "Advanced",
-    "badge": "Essential"
+    "badge": "Essential",
+    "badgeColor": "#E0F2FE",
+    "badgeTxtColor": "#2496ED"
   },
   {
     "id": "git",
@@ -127,7 +151,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Git.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Essential"
+    "badge": "Essential",
+    "badgeColor": "#FFEDD5",
+    "badgeTxtColor": "#F05032"
   },
   {
     "id": "github",
@@ -137,7 +163,9 @@
     "icon": "https://icon.icepanel.io/Technology/svg/GitHub.svg",
     "rating": 4.9,
     "difficulty": "Beginner-Friendly",
-    "badge": "Popular"
+    "badge": "Popular",
+    "badgeColor": "#F3F4F6",
+    "badgeTxtColor": "#24292F"
   },
   {
     "id": "nextjs",
@@ -147,6 +175,8 @@
     "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
     "rating": 4.8,
     "difficulty": "Advanced",
-    "badge": "Trending"
+    "badge": "Trending",
+    "badgeColor": "#F3F4F6",
+    "badgeTxtColor": "#111827"
   }
 ]

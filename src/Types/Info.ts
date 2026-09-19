@@ -6,5 +6,7 @@ export interface Technology {
     "icon": string,
     "rating": number,
     "difficulty": string,
-    "badge": string
+    "badge": string,
+    "badgeColor": string,
+    "badgeTxtColor": string
 }
