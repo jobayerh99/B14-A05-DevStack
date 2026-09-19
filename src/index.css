@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.simple-text{
+  font-semibold,
+  text-[#475569]
+}
