@@ -1,4 +1,4 @@
-import React from "react";
+
 import BannerImage from "../assets/banner-stack.png";
 
 const Banner = () => {
@@ -23,7 +23,7 @@ const Banner = () => {
       </div>
       {/* Image Section */}
       <div>
-        <img src={BannerImage} alt="Banner Logo" className="w-[350px] h-[350px]"/>
+        <img src={BannerImage} alt="Banner Logo" className="w-[450px] h-auto"/>
       </div>
     </div>
   );
