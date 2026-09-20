@@ -1,4 +1,3 @@
-import { CiStar } from "react-icons/ci";
 import type { Technology } from "../Types/Info";
 import { FaStar } from "react-icons/fa";
 

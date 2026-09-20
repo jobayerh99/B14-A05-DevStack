@@ -2,11 +2,16 @@
 @plugin "daisyui";
 
 .simple-text {
-  @apply font-semibold text-xs text-[#475569];
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #475569;
 }
 
 .banner-heading-txt {
-  @apply font-extrabold text-6xl text-[#0F172A];
+  font-weight: 800;
+  font-size: 3.75rem;
+  line-height: 1;
+  color: #0F172A;
 }
 
 .banner-gredient-txt {
@@ -22,5 +27,8 @@
 }
 
 .card-title {
-  @apply text-xl font-bold text-black 
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #000;
 }
