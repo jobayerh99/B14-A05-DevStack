@@ -5,6 +5,8 @@ import MainLayout from "./Components/MainLayout";
 import { toast, ToastContainer } from "react-toastify";
 import Asaid from "./Components/Asaid";
 import type { Technology } from "./Types/Info";
+import Footer from "./Components/Footer";
+import Intro from "./Components/Intro";
 
 const fetchTechInfo = async () => {
   const res = await fetch("/public/data.json");
@@ -52,6 +54,7 @@ function App() {
     <>
       <Nav />
       <Banner />
+      <Intro/>
       <div className="container mx-auto grid grid-cols-4 gap-5">
         <div className="col-span-3">
           <Suspense fallback={<h2>Loading...</h2>}>
@@ -68,6 +71,8 @@ function App() {
         handleRemoveTech = {handleRemoveTech}
         />
       </div>
+
+      <Footer/>
 
       <ToastContainer />
     </>

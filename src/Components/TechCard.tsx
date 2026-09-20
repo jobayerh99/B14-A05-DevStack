@@ -1,19 +1,19 @@
+import { MdOutlineDone } from "react-icons/md";
 import type { Technology } from "../Types/Info";
 import { FaStar } from "react-icons/fa";
 
 interface TechCardProps {
   singleTechnology: Technology;
   handleSavedTechnology: (technology: Technology) => void;
-  saved : Technology[]
+  saved: Technology[];
 }
 
 const TechCard = ({
   singleTechnology,
   handleSavedTechnology,
-  saved
+  saved,
 }: TechCardProps) => {
-
-  const selected = saved.some((iteam) => iteam.id === singleTechnology.id)
+  const selected = saved.some((iteam) => iteam.id === singleTechnology.id);
 
   return (
     <div className="group w-full rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
@@ -73,17 +73,29 @@ const TechCard = ({
 
       {/* Button */}
       <button
-      disabled={selected}
-      onClick={() => handleSavedTechnology(singleTechnology)}
-        className="
-      mt-5 w-full rounded-xl bg-[#0A0F1D] py-2.5
-      text-sm font-semibold text-white
-      transition-all duration-300
-      hover:bg-slate-800
-      active:scale-[0.98]
-      disabled:cursor-not-allowed"
+        disabled={selected}
+        onClick={() => handleSavedTechnology(singleTechnology)}
+        className={
+          `mt-5 w-full rounded-xl py-2.5
+    text-sm font-semibold
+    flex items-center justify-center gap-2
+    transition-all duration-300
+    active:scale-[0.98]  
+    ${
+      selected
+        ? "bg-[#FCE7F3] text-[#D81B7E] cursor-not-allowed"
+        : "bg-[#0A0F1D] text-white hover:bg-slate-800"
+    }`
+    }
       >
-        Add to Stack
+        {selected ? (
+          <>
+            <MdOutlineDone className="text-[#D81B7E] text-lg" />
+            Added to Stack
+          </>
+        ) : (
+          "Add to Stack"
+        )}
       </button>
     </div>
   );
