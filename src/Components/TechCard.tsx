@@ -4,12 +4,17 @@ import { FaStar } from "react-icons/fa";
 interface TechCardProps {
   singleTechnology: Technology;
   handleSavedTechnology: (technology: Technology) => void;
+  saved : Technology[]
 }
 
 const TechCard = ({
   singleTechnology,
   handleSavedTechnology,
+  saved
 }: TechCardProps) => {
+
+  const selected = saved.some((iteam) => iteam.id === singleTechnology.id)
+
   return (
     <div className="group w-full rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       {/* Icon + Badge */}
@@ -68,12 +73,15 @@ const TechCard = ({
 
       {/* Button */}
       <button
+      disabled={selected}
+      onClick={() => handleSavedTechnology(singleTechnology)}
         className="
       mt-5 w-full rounded-xl bg-[#0A0F1D] py-2.5
       text-sm font-semibold text-white
       transition-all duration-300
       hover:bg-slate-800
-      active:scale-[0.98]"
+      active:scale-[0.98]
+      disabled:cursor-not-allowed"
       >
         Add to Stack
       </button>

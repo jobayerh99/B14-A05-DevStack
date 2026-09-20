@@ -3,9 +3,11 @@ import type { Technology } from "../Types/Info";
 
 interface AsideCardProps {
   technologys: Technology[];
+  handleRemoveAll: () => void;
+  handleRemoveTech: (id: string) => void;
 }
 
-const Asaid = ({ technologys }: AsideCardProps) => {
+const Asaid = ({ technologys, handleRemoveAll, handleRemoveTech }: AsideCardProps) => {
   return (
     <aside className="w-full">
       <div className="w-full rounded-2xl border border-slate-200 bg-white p-5 space-y-4 flex flex-col">
@@ -49,7 +51,9 @@ const Asaid = ({ technologys }: AsideCardProps) => {
                   </div>
                 </div>
 
-                <button type="button">
+                <button 
+                onClick={() => handleRemoveTech(technology.id)}
+                type="button">
                   <RxCross1 />
                 </button>
               </div>
@@ -57,6 +61,7 @@ const Asaid = ({ technologys }: AsideCardProps) => {
 
             {/* Remove all */}
             <button
+            onClick={handleRemoveAll}
               type="button"
               className="mt-2 w-full rounded-xl border border-[#D82C20] bg-white py-2.5 text-sm font-semibold text-red-600 transition-all duration-300 hover:bg-red-500 hover:text-white active:scale-[0.98]"
             >

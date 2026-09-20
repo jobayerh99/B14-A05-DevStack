@@ -5,11 +5,13 @@ import TechCard from "./TechCard";
 interface MainLayoutProps {
   techPromise: Promise<Technology[]>;
   handleSavedTechnology: (technology: Technology) => void;
+  saved:Technology[]
 }
 
 const MainLayout = ({
   techPromise,
   handleSavedTechnology,
+  saved
 }: MainLayoutProps) => {
   const allTechnology = use(techPromise);
 
@@ -21,6 +23,7 @@ const MainLayout = ({
             key={singleTechnology.id}
             singleTechnology={singleTechnology}
             handleSavedTechnology={handleSavedTechnology}
+            saved = {saved}
           />
         ))}
       </div>

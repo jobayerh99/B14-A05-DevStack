@@ -2,7 +2,7 @@ import { Suspense, useState } from "react";
 import Banner from "./Components/Banner";
 import Nav from "./Components/Nav";
 import MainLayout from "./Components/MainLayout";
-import { ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import Asaid from "./Components/Asaid";
 import type { Technology } from "./Types/Info";
 
@@ -20,9 +20,33 @@ function App() {
   const [saved, setSaved] = useState<Technology[]>([]);
 
   // card section functionality
+
   const handleSavedTechnology = (singleTechnology: Technology) => {
-    
+    const alreadySelected = saved.map((alse) => alse.id)
+
+    if(alreadySelected.includes(singleTechnology.id)){
+      toast.error(`${singleTechnology.name} is already on your list`)
+      return
+    }
+
+    setSaved([...saved, singleTechnology])
+    toast.success(`${singleTechnology.name} is added successfully`)
   };
+
+  // asid section functionality
+
+  const handleRemoveAll = () =>{
+    if(saved.length === 0)return
+    setSaved([])
+    toast.error("Your stack is cleared successfully")
+  }
+
+  const handleRemoveTech = (id: string) =>{
+    const targetedTech = saved.find((tech) => tech.id === id)
+    const updatedList = saved.filter((tech) => tech.id !== id)
+    setSaved(updatedList)
+    if(targetedTech) toast.error(`${targetedTech.name} is removed successfully from your list`)
+  }
 
   return (
     <>
@@ -33,13 +57,15 @@ function App() {
           <Suspense fallback={<h2>Loading...</h2>}>
           <MainLayout 
           techPromise={techPromise} 
-          handleSavedTechnology={saved} 
+          handleSavedTechnology={handleSavedTechnology}
+          saved = {saved} 
           />
         </Suspense>
         </div>
         <Asaid 
-        technologys={saved} 
-
+        technologys = {saved}
+        handleRemoveAll = {handleRemoveAll}
+        handleRemoveTech = {handleRemoveTech}
         />
       </div>
 
