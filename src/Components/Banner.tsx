@@ -29,11 +29,11 @@ const Banner = () => {
 
       {/* Image Section */}
       <div className="flex justify-center">
-        <div className="rounded-3xl bg-gradient-to-br from-pink-50 via-white to-purple-50 p-6 shadow-sm">
+        <div className="rounded-3xl bg-linear-to-br from-pink-50 via-white to-purple-50 p-6 shadow-sm">
           <img
             src={BannerImage}
             alt="Development stack illustration"
-            className="w-[400px] max-w-full transition-transform duration-500 hover:scale-105"
+            className="w-100 max-w-full transition-transform duration-500 hover:scale-105"
           />
         </div>
       </div>
