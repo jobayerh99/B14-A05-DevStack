@@ -3,9 +3,13 @@ import { FaStar } from "react-icons/fa";
 
 interface TechCardProps {
   singleTechnology: Technology;
+  handleSavedTechnology: (technology: Technology) => void;
 }
 
-const TechCard = ({ singleTechnology }: TechCardProps) => {
+const TechCard = ({
+  singleTechnology,
+  handleSavedTechnology,
+}: TechCardProps) => {
   return (
     <div className="group w-full rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
       {/* Icon + Badge */}
@@ -45,7 +49,6 @@ const TechCard = ({ singleTechnology }: TechCardProps) => {
 
       {/* Information */}
       <div className="flex items-center justify-between">
-
         {/* Category */}
         <span className="rounded-lg bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600">
           {singleTechnology.category}

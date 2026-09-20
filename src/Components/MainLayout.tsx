@@ -1,33 +1,28 @@
-import { use, useState } from "react";
+import { use } from "react";
 import type { Technology } from "../Types/Info";
 import TechCard from "./TechCard";
-import Asaid from "./Asaid";
+
+interface MainLayoutProps {
+  techPromise: Promise<Technology[]>;
+  handleSavedTechnology: (technology: Technology) => void;
+}
 
 const MainLayout = ({
   techPromise,
-}: {
-  techPromise: Promise<Technology[]>;
-}) => {
+  handleSavedTechnology,
+}: MainLayoutProps) => {
   const allTechnology = use(techPromise);
 
-  // asid section functionality
-
-  const [saved, setSaved] = useState<Technology[]>([])
-
   return (
-    <section className="container mx-auto my-10">
-      <div className="grid grid-cols-4 gap-5">
-        <div className="col-span-3 grid grid-cols-3 gap-5">
-          {allTechnology.map((singleTechnology) => (
-            <TechCard
-              key={singleTechnology.id}
-              singleTechnology={singleTechnology}
-            />
-          ))}
-        </div>
-        <div className="col-span-1">
-          <Asaid technologys={saved}/>
-        </div>
+    <section className="w-full">
+      <div className="grid grid-cols-3 gap-5">
+        {allTechnology.map((singleTechnology) => (
+          <TechCard
+            key={singleTechnology.id}
+            singleTechnology={singleTechnology}
+            handleSavedTechnology={handleSavedTechnology}
+          />
+        ))}
       </div>
     </section>
   );
