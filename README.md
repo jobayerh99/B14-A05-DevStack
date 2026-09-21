@@ -1,10 +1,13 @@
-*Project Name
+*Project Name :-
+
 DevStack - Tech Stack Builder
 
-*Description
+*Description :-
+
 DevStack is a simple and modern web application that helps developers explore different technologies and build their own development stack by selecting the technologies they want to use.
 
-*Technologies Used
+*Technologies Used :- 
+
 React
 TypeScript
 Tailwind CSS
@@ -13,12 +16,13 @@ React Icons
 React Toastify
 Vite
 
-* Features
+*Features :-
+
 1. Explore different frontend, backend, database, and development tools.
 2. Add technologies to your personal stack.
 3. Remove individual technologies or clear the entire stack.
 
-*Answer
+*Answer :-
 1. JSX is a syntax that lets us write HTML-like code inside JavaScript. It makes React UI code easier to write and understand.
 
 2. Props are data passed from a parent to a child component. State is data managed inside a component that can change over time.
