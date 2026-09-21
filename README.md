@@ -1,32 +1,34 @@
-# React + TypeScript + Vite
+*Project Name
+DevStack - Tech Stack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+*Description
+DevStack is a simple and modern web application that helps developers explore different technologies and build their own development stack by selecting the technologies they want to use.
 
-Currently, two official plugins are available:
+*Technologies Used
+React
+TypeScript
+Tailwind CSS
+DaisyUI
+React Icons
+React Toastify
+Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Features
+1. Explore different frontend, backend, database, and development tools.
+2. Add technologies to your personal stack.
+3. Remove individual technologies or clear the entire stack.
 
-## React Compiler
+*Answer
+1. JSX is a syntax that lets us write HTML-like code inside JavaScript. It makes React UI code easier to write and understand.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Props are data passed from a parent to a child component. State is data managed inside a component that can change over time.
 
-## Expanding the Oxlint configuration
+3. useState is used to create and manage changing data in a component. I used it in App.tsx to store the selected technologies in the stack.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+4. useEffect is used to perform side effects such as fetching data. In this project, I did not use useEffect to load JSON data. I used fetch(), a Promise, use(), and Suspense instead.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+5. A unique key helps React identify each item in a list and efficiently update the UI when the list changes.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+6. Conditional rendering means showing different UI based on a condition. I used it to show an empty-stack message when no technology is selected.
+
+7. A parent passes data to a child using props. A child can communicate with the parent by calling a callback function passed through props.
